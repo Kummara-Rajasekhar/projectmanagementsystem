@@ -6,6 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.fasterxml.jackson.databind.cfg.CoercionInputShape.Array;
+
 @Entity
 @Data
 public class User {
@@ -17,5 +22,6 @@ public class User {
     private String fullName;
     private String email;
     private String password;
+    private List<Issue> assignedIssues=new ArrayList<>();
     private int projectSize;
 }
