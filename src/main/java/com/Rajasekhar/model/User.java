@@ -17,5 +17,5 @@ public class User {
     private String fullName;
     private String email;
     private String password;
-    private int projectSize;
+    private int projectSize
 }
