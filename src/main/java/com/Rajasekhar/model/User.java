@@ -23,6 +23,5 @@ public class User {
     private String email;
     private String password;
     private List<Issue> assignedIssues=new ArrayList<>();
-
     private int projectSize;
 }
