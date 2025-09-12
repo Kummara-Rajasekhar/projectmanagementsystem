@@ -1,6 +1,7 @@
 package com.Rajasekhar.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -32,7 +33,8 @@ public class Issue {
     @ManyToOne
     private Project project;
 
-
+    @OneToMany(mappedBy = "issue", cascade = CascadeType.ALL,orphanRemoval = true)
+    @JsonIgnore
     private List<Comment> comments=new ArrayList<>();
 
 
