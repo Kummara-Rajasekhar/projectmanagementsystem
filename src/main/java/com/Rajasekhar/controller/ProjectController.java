@@ -145,6 +145,7 @@ public class ProjectController {
         projectService.addUserToProject(invitation.getProjectId(),project.getId());
 
 
+
         return new ResponseEntity<>(invitation, HttpStatus.ACCEPTED);
     }
 
