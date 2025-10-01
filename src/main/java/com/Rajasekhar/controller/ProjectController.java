@@ -63,6 +63,7 @@ public class ProjectController {
             @RequestHeader("Authorization") String jwt,
             @RequestBody Project project
     ) throws Exception{
+
         User user=userService.findUserProfileByJwt(jwt);
         Project projects =projectService.createProject(project,user);
         return new ResponseEntity<>(projects, HttpStatus.OK);
